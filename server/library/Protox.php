@@ -86,7 +86,7 @@ class Protox
 				$func = self::$convertFunc[$opt['type']];
 				if($func){
 					//类型转换
-					$output = $func($this->input[$k], $opt);
+					$output = call_user_func($func, $this->input[$k], $opt);
 				}else{
 					//引用类型
 					$output = self::make($opt['type'], $this->input[$k]);
