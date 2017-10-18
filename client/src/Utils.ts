@@ -26,7 +26,7 @@ class Utils {
     
     public static imageProxyUrl(url:string){
         return (egret.Capabilities.renderMode == "webgl") ? 
-            window.API_SERVER + "api.php?cmd=image_proxy&url=" + encodeURIComponent(url) : 
+            window["API_SERVER"] + "api.php?cmd=image_proxy&url=" + encodeURIComponent(url) : 
             url;
     }
 }

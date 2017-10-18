@@ -81,7 +81,7 @@ class Game extends BaseComponent {
     private current:number = 0;//当前出手位置
     private coins:Array<egret.Bitmap> = [];
     private cards:Array<number> = [];
-    private pklist:Array<egret.Bitmap> = [];
+    private pklist:Array<egret.DisplayObject> = [];
     private op:Boolean = false;
     
     public constructor() {
