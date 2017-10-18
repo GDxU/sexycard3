@@ -15710,9 +15710,9 @@ var egret;
                 }
                 return drawCalls;
             }
-            var node;
+            var node = mask.$getRenderNode();
             //遮罩是单纯的填充图形,且alpha为1,性能优化
-            if (mask && (node = mask.$getRenderNode()) && (!mask.$children || mask.$children.length == 0) &&
+            if (mask && (!mask.$children || mask.$children.length == 0) &&
                 node && node.type == 3 /* GraphicsNode */ &&
                 node.drawData.length == 1 &&
                 node.drawData[0].type == 1 /* Fill */ &&

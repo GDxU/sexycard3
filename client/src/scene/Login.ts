@@ -21,7 +21,7 @@ class Login extends BaseComponent {
     private onLoginTouch(){
         var request = new egret.HttpRequest();
         request.responseType = egret.HttpResponseType.TEXT;
-        request.open("http://" + location.host + "/api.php?cmd=login&r=" + Math.random());
+        request.open(window.API_SERVER + "api.php?cmd=login&r=" + Math.random());
         request.addEventListener(egret.Event.COMPLETE,function(e: egret.Event) {
             var s = JSON.parse(request.response);
             if(s.auth){

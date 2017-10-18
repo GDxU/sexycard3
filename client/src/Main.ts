@@ -171,7 +171,7 @@ class Main extends eui.UILayer {
         this.loadingView.setLoadingText("正在获取服务器信息");
         var request = new egret.HttpRequest();
         request.responseType = egret.HttpResponseType.TEXT;
-        request.open("http://" + location.host + "/api.php?cmd=getserver&r=" + Math.random());
+        request.open(window.API_SERVER + "api.php?cmd=getserver&r=" + Math.random());
         request.addEventListener(egret.Event.COMPLETE,function(e: egret.Event) {
             var s = JSON.parse(request.response);
             this.loadingView.setLoadingText("正在连接服务器");
